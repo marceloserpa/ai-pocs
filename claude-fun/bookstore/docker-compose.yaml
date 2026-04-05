@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  database:
+    image: postgres:14.2
+    restart: always
+    container_name: outbox_poc_postgres01
+    networks:
+      - broker-kafka
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: outbox-poc
+    command: ['postgres', '-c', 'wal_level=logical']
+    volumes:
+      - ./sql-scripts/database-init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5442:5432
+
+volumes:
+  init.sh:
+
+networks:
+  broker-kafka:
+    driver: bridge
