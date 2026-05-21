@@ -28,3 +28,10 @@ print(tokenizer.decode(generation_output[0]))
 print("### printing Tokens ###")
 for id in input_ids[0]:
     print(tokenizer.decode(id))
+
+
+print("PRINT specific tokens")
+print(tokenizer.decode(3323))
+print(tokenizer.decode(622))
+print(tokenizer.decode([3323, 622]))
+print(tokenizer.decode(29901))    
