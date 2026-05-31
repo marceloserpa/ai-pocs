@@ -1,15 +1,11 @@
-
 import numpy as np
 import sys
-
 from transformers.pipelines.pt_utils import KeyDataset
 from transformers import pipeline
-
 
 review_text = sys.argv[1]
 
 model_path = "cardiffnlp/twitter-roberta-base-sentiment-latest"
-
 pipe = pipeline(
     model=model_path,
     tokenizer=model_path,
