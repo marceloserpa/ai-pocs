@@ -1,11 +1,16 @@
+import os
+
 import cohere
 import numpy as np
 import pandas as pd
 import faiss
 
+from dotenv import load_dotenv
 from tqdm import tqdm
 
-api_key = '######'
+load_dotenv()
+
+api_key = os.environ["CO_API_KEY"]
 co = cohere.Client(api_key)
 
 text = """
