@@ -1,0 +1,13 @@
+cohere
+langchain
+langchain-classic
+langchain-community
+llama-cpp-python
+sentence-transformers
+numpy
+pandas
+faiss-cpu
+tqdm
+python-dotenv
+rank-bm25
+scikit-learn
