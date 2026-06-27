@@ -2,3 +2,4 @@
 results/
 base_embedding_model/
 cosineloss_embedding_model/
+mnrloss_embedding_model/
